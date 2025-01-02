@@ -1,0 +1,66 @@
+<div class="custom-view-btn">
+  <a routerLink="/view-meetings"><button type="button" >View Scheduled Meetings</button></a>
+</div>
+<div class="custom-log-out">
+  <a routerLink="/home"><button type="button" >Log out</button></a>
+</div>
+
+
+
+<div class="main-class">
+  <div class="custom-card">
+    <form (ngSubmit)="onScheduleMeeting()" class="form-group">
+      <h1 class="text-center">Schedule Meeting</h1>
+      <p class="text-center mb-3">{{headingscedule}}</p>
+      <hr>
+      <label for="topic">Topic</label>
+      <input
+        type="text"
+        id="topic"
+        class="form-control custom-input"
+        [(ngModel)]="topic"
+        name="topic"
+        placeholder="Enter meeting topic"
+        required
+      />
+      <label for="numberOfPeople" class="mt-2">Number of People</label>
+      <input
+        type="number"
+        id="numberOfPeople"
+        class="form-control custom-input"
+        [(ngModel)]="numberOfPeople"
+        name="numberOfPeople"
+        placeholder="Enter number of participants"
+        required
+      />
+      <label for="startTime" class="mt-2">Start Time</label>
+      <input
+        type="time"
+        id="startTime"
+        class="form-control custom-input"
+        [(ngModel)]="startTime"
+        name="startTime"
+        required
+      />
+      <label for="endTime" class="mt-2">End Time</label>
+      <input
+        type="time"
+        id="endTime"
+        class="form-control custom-input"
+        [(ngModel)]="endTime"
+        name="endTime"
+        required
+      />
+      <label for="date" class="mt-2">Date</label>
+      <input
+        type="date"
+        id="date"
+        class="form-control custom-input"
+        [(ngModel)]="date"
+        name="date"
+        required
+      />
+      <button type="submit" class="btn custom-btn w-100 mt-3">Schedule</button>
+    </form>
+  </div>
+</div>

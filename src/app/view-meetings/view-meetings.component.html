@@ -1,0 +1,22 @@
+<div class="custom-view-btn">
+  <a routerLink="/schedule-meeting"><button type="button" >Back to schedule meeting</button></a>
+</div>
+<div class="custom-log-out">
+  <a routerLink="/home"><button type="button" >Log out</button></a>
+</div>
+
+ <div class="container mt-5">
+  <h3>Your Scheduled Meetings</h3>
+  <div *ngFor="let meeting of meetings" class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ meeting.topic }}</h5>
+      <p class="card-text">
+        <strong>Date:</strong> {{ meeting.date }}<br />
+        <strong>Time:</strong> {{ meeting.startTime }} - {{ meeting.endTime }}<br />
+        <strong>Participants:</strong> {{ meeting.numberOfPeople }}
+      </p>
+    </div>
+    <td><button (click)="deleteMeeting(meeting.id)">Delete</button></td>
+
+  </div>
+</div> 

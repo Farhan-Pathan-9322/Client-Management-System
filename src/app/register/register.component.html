@@ -1,0 +1,52 @@
+<div class="custom-view-btn">
+  <a routerLink="/home"><button type="button" >Back to Home</button></a>
+</div>
+
+<form (ngSubmit)="onRegister()" class="reg custom-form custom-card">
+    
+    <h1 class="text-center mb-3">{{Heading}}</h1>
+    <p class="text-center text-muted mb-4"><i>{{base_heading}}</i></p>
+    <hr>
+    <input
+      type="text"
+      placeholder="Name"
+      [(ngModel)]="name"
+      name="name"
+      required
+      class="form-control custom-input"
+    />
+    <input
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="email"
+      name="email"
+      required
+      class="form-control custom-input"
+    />
+    <input
+      type="text"
+      placeholder="Address"
+      [(ngModel)]="address"
+      name="address"
+      required
+      class="form-control custom-input"
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="password"
+      name="password"
+      required
+      class="form-control custom-input"
+    />
+    <input
+      type="password"
+      placeholder="Confirm Password"
+      [(ngModel)]="confirmPassword"
+      name="confirmPassword"
+      required
+      class="form-control custom-input"
+    />
+    <button type="submit" class="btn custom-btn w-100">Register</button>
+  </form>
+  

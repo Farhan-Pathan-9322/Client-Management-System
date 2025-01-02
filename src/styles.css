@@ -1,0 +1,18 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  background-color: #E5F5EA;
+}
+
+.container {
+  max-width: 600px;
+}
+
+button {
+  background-color: #026467;
+  color: white;
+}
+
+button:hover {
+  background-color: #014E50;
+}
