@@ -15,7 +15,7 @@ const db = mysql.createConnection({
     database: 'clientflow'
 });
 
-db.connect((err) => {
+ db.connect((err) => {
     if (err) throw err;
     console.log('Connected to database');
 });
@@ -79,4 +79,5 @@ app.delete('/deleteMeeting/:id',(req,res)=>{
 app.listen(5000, () => {
     console.log('Server running on port 5000');
 });
+
 
